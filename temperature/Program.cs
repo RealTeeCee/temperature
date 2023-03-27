@@ -17,9 +17,10 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
+    app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Demo Web API");
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Temperature API");
         options.RoutePrefix = string.Empty;
         //options.DocumentTitle = "Demo Web API";
         //options.DocExpansion(DocExpansion.List);
